@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinkedIn Promotion Blocker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Promotion Blocker</title>
+  <link rel="stylesheet" href="popup.css">
 </head>
 <body>
+  <div class="container">
+    <header>
+       <!-- Logo -->
+      <div class="logo">
+        <img src="./icons/linkedin-extension-icon.png" alt="LinkedIn Promotion Blocker" class="icon">
+      </div>
+      <h1>LinkedIn Promotion Blocker</h1>
+    </header>
     
+    <div class="stats-container">
+      <div class="stat-total">
+        <h2>Total Blocked</h2>
+        <div class="stat-number" id="total-blocked">0</div>
+      </div>
+      
+      <!-- Blocked by Type -->
+      <div class="stats-details">
+        <h3>Blocked by Type</h3>
+        <ul id="stats-list">
+          <li><span class="stat-type sponsored">Sponsored</span> <span class="stat-count" id="sponsored-count">0</span></li>
+          <li><span class="stat-type linkedin-offer">LinkedIn Offer</span> <span class="stat-count" id="linkedin-offer-count">0</span></li>
+          <li><span class="stat-type promotional">Promotional</span> <span class="stat-count" id="promotional-count">0</span></li>
+          <li><span class="stat-type inmail">InMail</span> <span class="stat-count" id="inmail-count">0</span></li>
+          <li><span class="stat-type job-alert">Job Alert</span> <span class="stat-count" id="job-alert-count">0</span></li>
+          <li><span class="stat-type other">Other</span> <span class="stat-count" id="other-count">0</span></li>
+        </ul>
+      </div>
+    </div>
+    
+    <footer>
+      <button id="reset-stats">Reset Statistics</button>
+    </footer>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <script src="popup.js"></script>
 </body>
 </html>

@@ -1,0 +1,178 @@
+/* popup.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  body {
+    width: 360px;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .container {
+    padding: 16px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+  }
+  
+  .icon {
+    width: 100%;
+    height: 100%;
+  }
+  
+  h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0077B5;
+  }
+  
+  .stats-container {
+    margin-bottom: 20px;
+  }
+  
+  .stat-total {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #0077B5;
+  }
+  
+  h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  .stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0077B5;
+  }
+  
+  .chart-container {
+    height: 200px;
+    margin: 20px 0;
+  }
+  
+  .stats-details {
+    margin-top: 20px;
+  }
+  
+  h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #555;
+  }
+  
+  #stats-list {
+    list-style: none;
+  }
+  
+  #stats-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .stat-type {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .sponsored {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .linkedin-offer {
+    background-color: #0077B5;
+    color: white;
+  }
+  
+  .promotional {
+    background-color: #f39c12;
+    color: white;
+  }
+  
+  .inmail {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .job-alert {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .other {
+    background-color: #95a5a6;
+    color: white;
+  }
+  
+  .stat-count {
+    font-weight: 600;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  
+  button {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #eaeaea;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .container {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .stat-number {
+    transition: all 0.3s ease;
+  }
+  
+  .stat-number:hover {
+    transform: scale(1.05);
+  }
