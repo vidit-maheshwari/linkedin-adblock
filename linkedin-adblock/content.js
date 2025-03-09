@@ -112,3 +112,33 @@ function hidePromotionalMessages() {
     });
   }
   
+
+// Set up a mutation observer to detect when new messages are loaded
+const observer = new MutationObserver(function(mutations) {
+    hidePromotionalMessages();
+  });
+
+  // Start observing the message container
+const observeContainer = () => {
+    const messagesContainer = document.querySelector('.msg-conversations-container__conversations-list');
+    if (messagesContainer) {
+      observer.observe(messagesContainer, { childList: true, subtree: true });
+      return true;
+    }
+    return false;
+  };
+  
+  // If the container isn't found immediately, set up a polling mechanism
+  if (!observeContainer()) {
+    const checkForContainer = setInterval(() => {
+      if (observeContainer()) {
+        clearInterval(checkForContainer);
+      }
+    }, 1000);
+  }
+
+  // Re-check periodically in case the observer misses something
+setInterval(hidePromotionalMessages, 3000);
+
+// Initial check
+hidePromotionalMessages();
