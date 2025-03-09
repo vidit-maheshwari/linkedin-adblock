@@ -1,0 +1,1 @@
+//logic for blocking sponsored messages and promotional content using html tags and classes blocking
